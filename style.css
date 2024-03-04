@@ -3,13 +3,13 @@
 } */
 
 body {
-    margin: 0px;
-    padding: 0px;
-    /* display: flex;
-    justify-content: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* container div style */
+
+/* container style */
 .container {
     display: flex;
     height: 500px;
@@ -17,15 +17,7 @@ body {
     flex-direction: column;
 }
 
-/* newDiv style */
-/* .box {
-    background-color: red;
-    border: 2px solid black;
-    height: 200px;
-    width: 200px;
-} */
-
-
+/* div style */
 .container div {
     background-color: red;
     border: 2px solid black;
