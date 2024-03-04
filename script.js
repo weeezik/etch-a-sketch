@@ -1,8 +1,4 @@
-//container flex box and flex-wrap set to wrap
 const container = document.querySelector(".container");
-
-
-
 
 let squaresPerSide = 2;
 let totalSquares = squaresPerSide*squaresPerSide;
@@ -13,8 +9,9 @@ function createDiv () {
     newDiv.classList.add("box");
 }
 
-createDiv();
+let i = 0;
+do {
+    createDiv();
+    i++;
+} while (i < totalSquares);
 
-// for (let i = 1; i = totalSquares; i++) {
-    
-// }
