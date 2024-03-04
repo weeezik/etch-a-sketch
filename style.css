@@ -12,9 +12,10 @@ body {
 /* container div style */
 .container {
     display: flex;
-    height: 500px;
-    width: 500px;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* newDiv style */
@@ -27,14 +28,9 @@ body {
 
 
 .container div {
-    background-color: red;
+    background-color: tomato;
     border: 2px solid black;
-    display: flex;
-    flex: 1 1 0;
+    width: 200px;
+    height: 200px;
+    line-height: 150px;
 }
-
-
-
-
-
-

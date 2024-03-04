@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 
-let squaresPerSide = 2;
+let squaresPerSide = 4;
 let totalSquares = squaresPerSide*squaresPerSide;
 
 function createDiv () {
