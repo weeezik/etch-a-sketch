@@ -1,36 +1,18 @@
-* {
+/* row: flex-direction: row (default)  */
+/* container: flex-direction: column */
+
+.container {
+    border: 2px solid black;
+    height: 500px;
+    max-height: 500px;
+    width: 500px;
+    max-width: 500px;
+}
+
+.row {
     outline: 2px solid blue;
 }
 
-body {
-    margin: 0px;
-    padding: 0px;
+.square {
+    outline: 2px solid red;
 }
-
-/* container div style */
-.container {
-    display: flex;
-}
-
-/* newDiv style */
-/* .box {
-    background-color: red;
-    border: 2px solid black;
-    height: 200px;
-    width: 200px;
-} */
-
-
-.container div {
-    background-color: red;
-    border: 2px solid black;
-    height: 750px;
-    width: 750px;
-    flex: 1 1 auto;
-
-}
-
-
-
-
-

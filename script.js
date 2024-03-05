@@ -1,18 +1,31 @@
+//set container item to a variable
 const container = document.querySelector(".container");
 
-let squaresPerSide = 2;
-let totalSquares = squaresPerSide
-*squaresPerSide;
 
-function createDiv () {
-    let newDiv = document.createElement("div");
-    container.appendChild(newDiv);
-    newDiv.classList.add("box");
+
+
+
+//squaresPerSide is the value X in a X by X grid that we are making 
+let squaresPerSide = 4;
+
+for (let i = 1; i <= squaresPerSide; i++) {
+    //create a row div
+    const row = document.createElement("div");
+    row.classList.add("row");
+    container.append(row);
+    for (let j = 1; j <= squaresPerSide; j++) {
+        //create a square div
+        const square = document.createElement("div");
+        square.classList.add("square");
+        row.append(square);
+    }
 }
 
-let i = 0;
-do {
-    createDiv();
-    i++;
-} while (i < totalSquares);
+
+
+
+
+
+
+
 
