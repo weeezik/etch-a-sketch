@@ -18,6 +18,8 @@ for (let i = 1; i <= squaresPerSide; i++) {
 }
 
 
+
+
 //hover event listener, for elements with class="square"
 //within event listener there is a function that changes the color of the div to plum (hover color = plum)
 
