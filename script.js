@@ -8,9 +8,6 @@ const button = document.createElement("button");
 button.textContent = "Click here to set grid size.";
 buttonDiv.append(button);
 
-
-//squaresPerSide is the value X in a X by X grid that we are making 
-
 // let squaresPerSide = 5;
 for (let i = 1; i <= 5; i++) {
     //create a row div
@@ -47,6 +44,7 @@ function userGrid () {
 
 userGrid();
 // container.remove(document.querySelector(".row"));
+
 
 
 
