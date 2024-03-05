@@ -23,10 +23,14 @@ body {
 }
 
 .square {
-    outline: 2px solid red;
+    /* style */
+    outline: 1px solid white;
+    background-color: darkmagenta;
+    /* flex */
     display: flex;
     flex-direction: row;
     flex: 1;
 }
+
 
 

@@ -2,7 +2,7 @@
 const container = document.querySelector(".container");
 
 //squaresPerSide is the value X in a X by X grid that we are making 
-let squaresPerSide = 2;
+let squaresPerSide = 16;
 
 for (let i = 1; i <= squaresPerSide; i++) {
     //create a row div
@@ -17,6 +17,9 @@ for (let i = 1; i <= squaresPerSide; i++) {
     }
 }
 
+
+//hover event listener, for elements with class="square"
+//within event listener there is a function that changes the color of the div to plum (hover color = plum)
 
 
 
