@@ -22,6 +22,15 @@ body {
     flex-direction: column;
 }
 
+.oldContainer {
+    height: 750px;
+    max-height: 750px;
+    width: 750px;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+}
+
 .row {
     /* outline: 2px solid blue; */
     display: flex;

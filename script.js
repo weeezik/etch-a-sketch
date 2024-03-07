@@ -8,26 +8,34 @@ const button = document.createElement("button");
 button.textContent = "Click here to set grid size.";
 buttonDiv.append(button);
 
-//default settings with squaresPerSide === 5
-// let squaresPerSide = 5;
-// for (let i = 1; i <= 5; i++) {
-//     //create a row div
-//     const row = document.createElement("div");
-//     row.classList.add("row");
-//     container.append(row);
-//     for (let j = 1; j <= 5; j++) {
-//         //create a square div
-//         const square = document.createElement("div");
-//         square.classList.add("square");
-//         row.append(square);
-//     }
-// }
+const oldContainer = document.createElement("div");
+container.appendChild(oldContainer);
+oldContainer.classList.add("oldContainer");
 
-function createGrid () {
-    //remove elements with the id count-1 (i.e., the previous count)
+// default settings with squaresPerSide === 5
+
+for (let i = 1; i <= 5; i++) {
+    //create a row div
+    const row = document.createElement("div");
+    row.classList.add("row");
+    oldContainer.append(row);
+    for (let j = 1; j <= 5; j++) {
+        //create a square div
+        const square = document.createElement("div");
+        square.classList.add("square");
+        row.append(square);
+    }
+}
+
+
+
+function createGrid() {
     const newContainer = document.createElement("div");
+    container.appendChild(newContainer);
+    newContainer.classList.add("newContainer");
+    //remove elements with the id count-1 (i.e., the previous count)
     let squaresPerSide = Number(prompt("Enter your X value. This grid is built in a X by X format."));
-    for (let i = 1; i <= squaresPerSide; i++) {        
+    for (let i = 1; i <= squaresPerSide; i++) {
         //create a row div
         const currentRow = document.createElement("div");
         currentRow.classList.add("row");
@@ -39,19 +47,18 @@ function createGrid () {
             currentSquare.setAttribute("id", squaresPerSide);
             currentRow.append(currentSquare);
         }
-        
     }
-    document.appendChild(newContainer);
 }
 
-function removeContainer () {
-    container.remove(); 
-}
-
-button.addEventListener("click", () => {    
-    // removeContainer();
+button.addEventListener("click", () => {
+    oldContainer.remove();
     createGrid();
+    //use id method to delete previously generated user grids.
 });
+
+
+
+
 
 
 
