@@ -8,37 +8,57 @@ const button = document.createElement("button");
 button.textContent = "Click here to set grid size.";
 buttonDiv.append(button);
 
-button.addEventListener("click", () => {
+//default settings with squaresPerSide === 5
+let squaresPerSide = 5;
+for (let i = 1; i <= 5; i++) {
+    //create a row div
+    const row = document.createElement("div");
+    row.classList.add("row");
+    container.append(row);
+    for (let j = 1; j <= 5; j++) {
+        //create a square div
+        const square = document.createElement("div");
+        square.classList.add("square");
+        row.append(square);
+    }
+}
+
+function createGrid () {
+    //remove elements with the id count-1 (i.e., the previous count)
+    let count = 0;
     let squaresPerSide = Number(prompt("Enter your X value. This grid is built in a X by X format."));
-    for (let i = 1; i <= squaresPerSide; i++) {
-        //delete
-        
+    for (let i = 1; i <= squaresPerSide; i++) {        
         //create a row div
-        const row = document.createElement("div");
-        row.classList.add("row");
-        container.append(row);
+        const currentRow = document.createElement("div");
+        currentRow.classList.add("row");
+        //add id = i to row
+        currentRow.setAttribute("id", count);
+        //DOM manipulation here
+        container.append(currentRow);
         for (let j = 1; j <= squaresPerSide; j++) {
             //create a square div
-            const square = document.createElement("div");
-            square.classList.add("square");
-            row.append(square);
+            const currentSquare = document.createElement("div");
+            currentSquare.classList.add("square");
+            //add id = i to currentSquare elements
+            currentSquare.setAttribute("id", count);
+            //DOM manipulation here
+            currentRow.append(currentSquare);
         }
     }
-});
+    count++;
+}
 
-// let squaresPerSide = 5;
-// for (let i = 1; i <= 5; i++) {
-//     //create a row div
-//     const row = document.createElement("div");
-//     row.classList.add("row");
-//     container.append(row);
-//     for (let j = 1; j <= 5; j++) {
-//         //create a square div
-//         const square = document.createElement("div");
-//         square.classList.add("square");
-//         row.append(square);
-//     }
-// }
+
+
+button.addEventListener("click", () => {
+    createGrid();   
+})
+
+
+//remove previous row
+    // document.removeChild(container.firstElementChild)
+
+    //remove previous square divs
 
 
 
