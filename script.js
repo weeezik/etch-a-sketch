@@ -32,6 +32,7 @@ for (let i = 1; i <= 5; i++) {
 function createGrid() {
     const newContainer = document.createElement("div");
     container.appendChild(newContainer);
+    //maybe use [i or count in the newContainer to delete newContainer[count-1] while adding newContainer[count]]
     newContainer.classList.add("newContainer");
     //remove elements with the id count-1 (i.e., the previous count)
     let squaresPerSide = Number(prompt("Enter your X value. This grid is built in a X by X format."));
