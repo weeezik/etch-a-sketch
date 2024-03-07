@@ -25,32 +25,33 @@ buttonDiv.append(button);
 
 function createGrid () {
     //remove elements with the id count-1 (i.e., the previous count)
+    const newContainer = document.createElement("div");
     let squaresPerSide = Number(prompt("Enter your X value. This grid is built in a X by X format."));
     for (let i = 1; i <= squaresPerSide; i++) {        
         //create a row div
         const currentRow = document.createElement("div");
         currentRow.classList.add("row");
-        currentRow.setAttribute("id", id);
-        container.append(currentRow);
+        currentRow.setAttribute("id", squaresPerSide);
+        newContainer.append(currentRow);
         for (let j = 1; j <= squaresPerSide; j++) {
             const currentSquare = document.createElement("div");
             currentSquare.classList.add("square");
-            currentSquare.setAttribute("id", id);
+            currentSquare.setAttribute("id", squaresPerSide);
             currentRow.append(currentSquare);
         }
         
     }
+    document.appendChild(newContainer);
 }
 
+function removeContainer () {
+    container.remove(); 
+}
 
-let id = 1;
-button.addEventListener("click", (id) => {    
-    createGrid(id);
-    id++;
+button.addEventListener("click", () => {    
+    // removeContainer();
+    createGrid();
 });
-
-// document.removeChild(container.firstElementChild)
-
 
 
 
