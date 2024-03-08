@@ -37,7 +37,7 @@ function createGrid() {
     //maybe use [i or count in the newContainer to delete newContainer[count-1] while adding newContainer[count]]
     newContainer.classList.add("newContainer");
     //remove elements with the id count-1 (i.e., the previous count)
-    let squaresPerSide = Number(prompt("Enter your X value. This grid is built in a X by X format."));
+    let squaresPerSide = Number(prompt("This grid is built in a X by X format. Enter your X value (max. 100): "));
     for (let i = 1; i <= squaresPerSide; i++) {
         //create a row div
         const currentRow = document.createElement("div");
@@ -60,6 +60,9 @@ button.addEventListener("click", () => {
     createGrid();
     //use id method to delete previously generated user grids.
 });
+
+
+
 
 
 
