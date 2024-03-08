@@ -40,13 +40,13 @@ body {
 
 .square {
     /* style */
-    outline: 1px solid white;
+    outline: 1px solid black;
     background-color: darkmagenta;
     /* flex */
     display: flex;
     flex-direction: row;
     flex: 1;
-    transition: all 0.5s ease-out; 
+    transition: all 0.2s ease-out; 
 }
 /* hover effect */
 .square:hover {
